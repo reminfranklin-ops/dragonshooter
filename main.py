@@ -35,7 +35,7 @@ player2x = []
 player2y = []
 player2x_change = []
 player2y_change = []
-no_of_enemies = 3
+no_of_enemies = 7
 
 for i in range(no_of_enemies):
     player2img.append(pygame.image.load('dragon (3).png'))
@@ -52,7 +52,7 @@ swordy_change = 5
 sword_state = "ready"
 
 score_value = 0
-font = pygame.font.Font('freesansbold.ttf',22)
+font = pygame.font.Font('Angelina sans.ttf',52)
 
 textx = 10
 texty = 10
