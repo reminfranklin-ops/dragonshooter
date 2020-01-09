@@ -14,7 +14,7 @@ mixer.music.play(-1)
 
 pygame.display.set_caption("GAME OF THRONES: THE TARGAREYAN ERA")
 
-icon = pygame.image.load('dragon.png')
+icon = pygame.image.load('dragon (1).png')
 pygame.display.set_icon(icon)
 
 object1 = pygame.image.load('castle.png')
