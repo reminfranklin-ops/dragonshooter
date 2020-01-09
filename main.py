@@ -134,7 +134,7 @@ while running:
                 swordx = player1x
                 swing_sword(player1x,swordy)
     if event.type == pygame.KEYUP:
-        if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
+        if event.key == pygame.K_a or event.key == pygame.K_d:
             player1x_change = 0
 
     player1x += player1x_change
