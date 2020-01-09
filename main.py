@@ -9,7 +9,7 @@ pygame.init()
 
 screen = pygame.display.set_mode((900, 600))
 background = pygame.image.load('mountain (1).png')
-mixer.music.load('Bigil-Rayappan-BGM-Ringtone.wav')
+mixer.music.load('background.wav')
 mixer.music.play(-1)
 
 pygame.display.set_caption("GAME OF THRONES: THE TARGAREYAN ERA")
@@ -116,7 +116,7 @@ def isCollision(player2x, player2y, swordx, swordy):
 
 running = True
 while running:
-    screen.fill((52, 90, 100))
+    screen.fill((52, 100, 55))
     screen.blit(background, (210, 140))
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
