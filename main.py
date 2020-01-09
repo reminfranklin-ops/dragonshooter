@@ -138,10 +138,10 @@ while running:
             player1x_change = 0
 
     player1x += player1x_change
-    if player1x <= 110:
-        player1x = 110
-    elif player1x >= 710:
-        player1x = 710
+    if player1x <= 120:
+        player1x = 120
+    elif player1x >= 700:
+        player1x = 700
 
     for i in range(no_of_enemies):
         if player2y[i] > 200:
