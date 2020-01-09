@@ -133,12 +133,6 @@ while running:
                 sword_sound.play()
                 swordx = player1x
                 swing_sword(player1x,swordy)
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            if event.key == pygame.MOUSEWHEEL:
-                sword_sound = mixer.Sound('laser.wav')
-                sword_sound.play()
-                swordx = player1x
-                swing_sword(player1x, swordy)
     if event.type == pygame.KEYUP:
         if event.key == pygame.K_LEFT or event.key == pygame.K_RIGHT:
             player1x_change = 0
