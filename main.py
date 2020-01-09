@@ -123,11 +123,11 @@ while running:
             if event.key == pygame.K_q:
                 running = False
     if event.type == pygame.KEYDOWN:
-        if event.key == pygame.K_LEFT:
+        if event.key == pygame.K_a:
             player1x_change = -2
-        if event.key == pygame.K_RIGHT:
+        if event.key == pygame.K_d:
             player1x_change = 2
-        if event.key == pygame.K_SPACE:
+        if event.key == pygame.K_ENTER:
             if sword_state is "ready":
                 sword_sound = mixer.Sound('laser.wav')
                 sword_sound.play()
