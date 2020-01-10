@@ -9,8 +9,8 @@ pygame.init()
 
 screen = pygame.display.set_mode((1200, 750))
 background = pygame.image.load('mountain (1).png')
-mixer.music.load('petta.wav')
-mixer.music.play(-1)
+mixer.music.load('mario.wav')
+mixer.music.play(2)
 
 pygame.display.set_caption("GAME OF THRONES: THE TARGAREYAN ERA")
 
@@ -57,7 +57,7 @@ for i in range(no_of_enemies):
 
 sword = pygame.image.load('sword (1).png')
 swordx = 0
-swordy = 500
+swordy = 650
 swordx_change = 0
 swordy_change = 5
 sword_state = "ready"
@@ -126,7 +126,7 @@ def swing_sword(x,y):
 
 def wining():
     win = winner.render("WINNER",True , (0, 0, 0))
-    screen.blit(win, (470, 300))
+    screen.blit(win, (450, 300))
 
 def isCollision(player2x, player2y, swordx, swordy):
     distance = math.sqrt((math.pow(player2x-swordx,2)) + (math.pow(player2y-swordy,2)))
@@ -203,10 +203,10 @@ while running:
 
             player2x[i] += player2x_change[i]
             if player2x[i] <= 0:
-                player2x_change[i] = 4
+                player2x_change[i] = 0.3
                 player2y[i] += player2y_change[i]
             elif player2x[i] >= 836:
-                player2x_change[i] = -4
+                player2x_change[i] = -0.3
                 player2y[i] += player2y_change[i]
             collision = isCollision(player2x[i], player2y[i], swordx, swordy)
             if collision:
