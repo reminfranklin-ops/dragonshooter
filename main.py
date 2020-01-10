@@ -7,9 +7,9 @@ from pygame import mixer
 
 pygame.init()
 
-screen = pygame.display.set_mode((900, 600))
+screen = pygame.display.set_mode((1200, 750))
 background = pygame.image.load('mountain (1).png')
-mixer.music.load('background.wav')
+mixer.music.load('petta.wav')
 mixer.music.play(-1)
 
 pygame.display.set_caption("GAME OF THRONES: THE TARGAREYAN ERA")
@@ -18,26 +18,26 @@ icon = pygame.image.load('dragon.png')
 pygame.display.set_icon(icon)
 
 destination = pygame.font.Font('freesansbold.ttf', 20)
-dstx = 400
+dstx = 500
 dsty = 20
 
-king = pygame.image.load('knight.png')
-kingx = 400
-kingy = 500
+king = pygame.image.load('crown.png')
+kingx = 500
+kingy = 7500
 kingx_change = 0
 kingy_change = 0
 
 object1 = pygame.image.load('castle.png')
 objectx = 0
-objecty = 470
+objecty = 610
 
 obj2 = pygame.image.load('castle.png')
-objx = 770
-objy = 470
+objx = 1070
+objy = 610
 
-player1img = pygame.image.load('crown.png')
-player1x = 400
-player1y = 450
+player1img = pygame.image.load('knight.png')
+player1x = 500
+player1y = 650
 player1x_change = 0
 
 
@@ -49,7 +49,7 @@ player2y_change = []
 no_of_enemies = 3
 
 for i in range(no_of_enemies):
-    player2img.append(pygame.image.load('dragon (3).png'))
+    player2img.append(pygame.image.load('dragon (1).png'))
     player2x.append(random.randint(0, 835))
     player2y.append(random.randint(50, 150))
     player2x_change.append(0.3)
@@ -75,7 +75,7 @@ terx = 10
 tery = 60
 
 creax = 400
-creay = 560
+creay = 710
 
 over = pygame.font.Font('Angelina Alt Demo.ttf', 54)
 
@@ -91,7 +91,7 @@ def dest(x,y):
     screen.blit(destin, (x,y))
 
 def creator(x,y):
-    creartors = credit.render("A Game By Remin Franklin",True , (0, 0, 0))
+    creartors = credit.render("A Game By Remin Franklin and team",True , (0, 0, 0))
     screen.blit(creartors, (x,y))
 
 def terminator(x,y):
@@ -126,7 +126,7 @@ def swing_sword(x,y):
 
 def wining():
     win = winner.render("WINNER",True , (0, 0, 0))
-    screen.blit(win, (300, 300))
+    screen.blit(win, (470, 300))
 
 def isCollision(player2x, player2y, swordx, swordy):
     distance = math.sqrt((math.pow(player2x-swordx,2)) + (math.pow(player2y-swordy,2)))
@@ -139,7 +139,7 @@ def isCollision(player2x, player2y, swordx, swordy):
 running = True
 while running:
     screen.fill((52, 90, 100))
-    screen.blit(background, (210, 140))
+    screen.blit(background, (310, 240))
     for event in pygame.event.get():
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_q:
@@ -176,16 +176,16 @@ while running:
     player1x += player1x_change
     if kingx <= 0:
         kingx = 0
-    elif kingx >= 734:
-        kingx = 734
+    elif kingx >= 1134:
+        kingx = 1134
     if kingy <= 0:
         kingy = 0
     elif kingy >= 550:
         kingy = 550
     if player1x <= 110:
         player1x = 110
-    elif player1x >= 710:
-        player1x = 710
+    elif player1x >= 1000:
+        player1x = 1000
 
     for i in range(no_of_enemies):
         if kingy < 50:
@@ -203,10 +203,10 @@ while running:
 
             player2x[i] += player2x_change[i]
             if player2x[i] <= 0:
-                player2x_change[i] = 0.3
+                player2x_change[i] = 4
                 player2y[i] += player2y_change[i]
             elif player2x[i] >= 836:
-                player2x_change[i] = -0.3
+                player2x_change[i] = -4
                 player2y[i] += player2y_change[i]
             collision = isCollision(player2x[i], player2y[i], swordx, swordy)
             if collision:
