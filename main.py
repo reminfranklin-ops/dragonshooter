@@ -46,7 +46,7 @@ player2x = []
 player2y = []
 player2x_change = []
 player2y_change = []
-no_of_enemies = 3
+no_of_enemies = 10
 
 for i in range(no_of_enemies):
     player2img.append(pygame.image.load('dragon (1).png'))
